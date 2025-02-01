@@ -5,10 +5,7 @@
     <div class="projects__list">
       <div v-for="project in projects" :key="project.id" class="project-card">
         <div class="project-card__content">
-          <!-- 프로젝트 이미지 -->
           <img :src="project.image" :alt="project.name" class="project-card__image" />
-
-          <!-- 기본 정보: 제목, 한 줄 소개, 태그 -->
           <div class="project-card__info">
             <h3 class="project-card__name">{{ project.name }}</h3>
             <p class="project-card__desc">{{ project.shortDescription }}</p>
@@ -17,11 +14,10 @@
             </div>
           </div>
 
-          <!-- 마우스 오버 시 나타나는 상세 정보 -->
           <div class="project-card__overlay">
             <p class="project-card__full-desc">{{ project.name }}</p>
             <div class="project-card__buttons">
-              <button class="btn">자세히 보기</button>
+              <button class="btn" @click="openModal(project)">자세히 보기</button>
               <a v-if="project.githubLink" :href="project.githubLink" target="_blank" class="btn">GitHub 바로가기</a>
               <button v-if="project.youtubeLink" @click="openLink(project.youtubeLink)" class="btn">
                 YouTube 바로가기
@@ -31,11 +27,15 @@
         </div>
       </div>
     </div>
+
+    <!-- 모달 추가 -->
+    <ProjectModal v-if="selectedProject" :project="selectedProject" :isOpen="isModalOpen" @close="closeModal" />
   </section>
 </template>
 
 <script setup>
 import { ref } from "vue";
+import ProjectModal from "./ProjectModal.vue";
 
 // 이미지 동적 로드
 const images = import.meta.glob("../assets/image/*.png", { eager: true });
@@ -46,10 +46,17 @@ const projects = ref([
     id: 1,
     name: "Your Capsules",
     shortDescription: "게임 UX/UI 기반의 타임/목표 캡슐 관리 플랫폼입니다.",
+    description: "타임캡슐을 생성하고, 미래에 열어볼 수 있는 플랫폼",
+    date: "2024.05 - 2024.06",
+    teamSize: "3인 (프론트 1명, 백엔드 1명, 풀스택 1명)",
+    tags: ["팀", "웹", "UI/UX"],
+    features: ["캡슐 생성 및 저장", "미래 일정 설정", "친구와 공유 가능"],
+    troubleshooting: ["캡슐 데이터 저장 오류 해결", "Vue 상태 관리 개선"],
+    screenshots: ["../assets/image/capsule-1.png"],
     image: images["../assets/image/capsule-thumbnail.png"].default,
+    color: "#FF6F61", // 포인트 컬러 적용
     githubLink: "https://github.com/seobkun/yourcapsules",
     youtubeLink: null,
-    tags: ["JavaScript", "Vue", "HTML", "CSS"],
   },
   {
     id: 2,
@@ -58,7 +65,7 @@ const projects = ref([
     image: images["../assets/image/traum-thumbnail.png"].default,
     githubLink: null,
     youtubeLink: "https://www.youtube.com/watch?v=traum-thumbnail",
-    tags: ["JavaScript", "Vue", "HTML", "CSS", "Babylon.js"],
+    tags: ["팀", "웹", "스마트팩토리"],
   },
   {
     id: 3,
@@ -67,7 +74,7 @@ const projects = ref([
     image: images["../assets/image/hyundai-thumbnail.png"].default,
     githubLink: null,
     youtubeLink: "https://www.youtube.com/watch?v=hyundai",
-    tags: ["JavaScript", "HTML", "CSS", "jQuery", "SMWP"],
+    tags: ["팀", "웹", "스마트팩토리"],
   },
   {
     id: 4,
@@ -76,11 +83,36 @@ const projects = ref([
     image: images["../assets/image/cokkiri-thumbnail.png"].default,
     githubLink: null,
     youtubeLink: null,
-    tags: ["JavaScript", "Vue", "HTML", "CSS"],
+    tags: ["팀", "웹", "사이드"],
+  },
+  {
+    id: 5,
+    name: "Seobkun's Portfolio",
+    shortDescription: "스터디와 프로젝트 멤버를 모으고, 일정을 관리하는 플랫폼입니다.",
+    image: images["../assets/image/cokkiri-thumbnail.png"].default,
+    githubLink: "http://github.com/seobkun325",
+    youtubeLink: null,
+    tags: ["개인", "웹", "포트폴리오"],
   },
 ]);
 
-// 유튜브 링크 열기 함수 (새 창에서 열림)
+// 모달 상태 관리
+const selectedProject = ref(null);
+const isModalOpen = ref(false);
+
+// 모달 열기
+const openModal = (project) => {
+  selectedProject.value = project;
+  isModalOpen.value = true;
+};
+
+// 모달 닫기
+const closeModal = () => {
+  selectedProject.value = null;
+  isModalOpen.value = false;
+};
+
+// 유튜브 링크 열기
 const openLink = (url) => {
   window.open(url, "_blank");
 };
