@@ -33,7 +33,7 @@
 .about {
   width: 100vw;
   min-height: 100vh;
-  background-color: #292929;
+  background-color: #1f1f1f;
   color: white;
   display: flex;
   flex-direction: column;
