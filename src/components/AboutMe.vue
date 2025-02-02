@@ -4,7 +4,7 @@
 
     <!-- 프로필 이모지 -->
     <div class="about__profile">
-      <img src="../assets/image/avatar.png" alt="Profile" class="about__avatar" />
+      <!-- <img src="../assets/image/avatar.png" alt="Profile" class="about__avatar" /> -->
     </div>
 
     <!-- 해시태그 -->
