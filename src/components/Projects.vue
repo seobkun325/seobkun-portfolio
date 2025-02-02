@@ -62,15 +62,33 @@ const projects = ref([
     id: 2,
     name: "Traum",
     shortDescription: "3D 오브젝트와 Live-Data 매핑의 디지털트윈 모니터링 플랫폼입니다.",
+    description: "asdfsfsfsdf",
+    date: "2024.07 - 2024.08",
+    teamSize: "3인 (프론트 2명, 백엔드 1명)",
+    tags: ["팀", "웹", "UI/UX"],
+    features: ["캡슐 생성 및 저장", "미래 일정 설정", "친구와 공유 가능"],
+    troubleshooting: ["캡슐 데이터 저장 오류 해결", "Vue 상태 관리 개선"],
+    screenshots: ["../assets/image/traum-1.png"],
     image: images["../assets/image/traum-thumbnail.png"].default,
+    color: "#FF6F61", // 포인트 컬러 적용
     githubLink: null,
-    youtubeLink: "https://www.youtube.com/watch?v=traum-thumbnail",
-    tags: ["팀", "웹", "스마트팩토리"],
+    youtubeLink: "https://youtube.com/seobkun/yourcapsules",
   },
   {
     id: 3,
     name: "의장공정 모니터링 시스템",
     shortDescription: "실시간 자재, 생산, 품질, 설비 데이터 모니터링 시스템입니다.",
+    description: "asdfsfsfsdf",
+    date: "2024.12 - 2024.12",
+    teamSize: "5인 (프론트 3명, 백엔드 3명,)",
+    tags: ["팀", "웹", "UI/UX"],
+    features: ["캡슐 생성 및 저장", "미래 일정 설정", "친구와 공유 가능"],
+    troubleshooting: ["캡슐 데이터 저장 오류 해결", "Vue 상태 관리 개선"],
+    screenshots: ["../assets/image/traum-1.png"],
+    image: images["../assets/image/traum-thumbnail.png"].default,
+    color: "#FF6F61", // 포인트 컬러 적용
+    githubLink: null,
+    youtubeLink: "https://youtube.com/seobkun/yourcapsules",
     image: images["../assets/image/hyundai-thumbnail.png"].default,
     githubLink: null,
     youtubeLink: "https://www.youtube.com/watch?v=hyundai",
@@ -88,8 +106,8 @@ const projects = ref([
   {
     id: 5,
     name: "Seobkun's Portfolio",
-    shortDescription: "스터디와 프로젝트 멤버를 모으고, 일정을 관리하는 플랫폼입니다.",
-    image: images["../assets/image/cokkiri-thumbnail.png"].default,
+    shortDescription: "저의 개발자 포트폴리오 사이트입니다.",
+    image: images["../assets/image/portfolio-thumbnail.png"].default,
     githubLink: "http://github.com/seobkun325",
     youtubeLink: null,
     tags: ["개인", "웹", "포트폴리오"],
@@ -143,7 +161,7 @@ const openLink = (url) => {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
   gap: 40px;
-  width: 70%;
+  width: 60%;
   margin-bottom: 5%;
 }
 
@@ -151,7 +169,7 @@ const openLink = (url) => {
 .project-card {
   position: relative;
   width: 100%;
-  background: #292929;
+  background: #353535;
   border-radius: 10px;
   overflow: hidden;
 }

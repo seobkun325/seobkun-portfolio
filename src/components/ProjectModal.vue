@@ -8,7 +8,8 @@
           <span v-for="tag in project.tags" :key="tag" class="project-tag">{{ tag }}</span>
         </div>
         <h2 class="modal__title">{{ project.name }}</h2>
-        <p class="modal__date">{{ project.date }} &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{ project.teamSize }}</p>
+        <p class="modal__date">{{ project.date }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ project.teamSize }}</p>
+        //+
       </div>
 
       <!-- 프로젝트 대표 이미지 (포인트 컬러 위로 배치) -->
