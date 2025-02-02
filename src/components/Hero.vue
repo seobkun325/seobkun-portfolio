@@ -12,7 +12,7 @@
       <h2 class="hero__subtitle">프론트엔드 개발자 <span class="bold">윤준섭</span>입니다.</h2>
       <p class="hero__description">
         사용자를 생각하는 <span class="highlight">역지사지</span> 마인드,<br />
-        포기하지 않고 <span class="bold">책임감</span> 있게 일하는 개발자입니다.
+        포기하지 않고 <span class="highlight">책임감</span> 있게 일하는 개발자입니다.
       </p>
     </div>
 
