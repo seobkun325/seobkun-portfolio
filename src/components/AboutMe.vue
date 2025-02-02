@@ -4,15 +4,15 @@
 
     <!-- 프로필 이모지 -->
     <div class="about__profile">
-      <!-- <img src="../assets/image/avatar.png" alt="Profile" class="about__avatar" /> -->
+      <img src="/me.png" alt="Profile" class="about__avatar" />
     </div>
 
     <!-- 해시태그 -->
     <div class="about__tags">
+      <span>#역지사지</span>
+      <span>#끈기 </span>
+      <span>#도전정신</span>
       <span>#???</span>
-      <span>#????</span>
-      <span>#??</span>
-      <span>#?????</span>
     </div>
 
     <!-- 인터뷰 섹션 -->
@@ -93,8 +93,8 @@
 }
 
 .about__avatar {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
 }
 
