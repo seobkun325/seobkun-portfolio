@@ -230,7 +230,6 @@
 .skills__list {
   display: flex;
   gap: 15px;
-  justify-content: center;
   flex-wrap: wrap;
 }
 

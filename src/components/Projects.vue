@@ -69,7 +69,7 @@ const projects = ref([
     screenshots: ["../assets/image/capsule-1.png", "../assets/image/capsule-2.png"],
     image: images["../assets/image/capsule-thumbnail.png"].default,
     color: "#FF6F61", // 포인트 컬러 적용
-    githubLink: "https://github.com/seobkun/yourcapsules",
+    githubLink: "https://github.com/seobkun325/ThreeIdiots-FE",
     youtubeLink: null,
     tech: ["JavaScript", "Vue", "HTML", "CSS"],
   },

@@ -150,7 +150,8 @@ const education = ref([
 
 /* 개별 아이콘을 흰색 배경의 40x40 div 안에 배치 */
 .tech-icon {
-  width: 10%;
+  width: 40px;
+  height: 40px;
   background-color: black;
   display: flex;
   align-items: center;
@@ -159,8 +160,8 @@ const education = ref([
 }
 
 .icon {
-  width: 60%;
-  height: 60%;
+  width: 30px;
+  height: 30px;
 }
 
 /* 반응형: 화면이 작아지면 1열로 정렬 */
