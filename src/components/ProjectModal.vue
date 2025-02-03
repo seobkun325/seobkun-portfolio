@@ -29,17 +29,20 @@
         <div class="line"></div>
 
         <!-- 역할 및 기여 내용 -->
-        <h3>💻 내 역할</h3>
+        <h3>✨ 내 역할</h3>
         <ul class="modal__role">
           <li v-for="role in project.role" :key="role">{{ role }}</li>
         </ul>
         <div class="line"></div>
 
         <!-- 사용 기술 -->
-        <h3>⚙️ 사용 기술</h3>
-        <ul class="modal__tech">
-          <li v-for="tech in project.tech" :key="tech">{{ tech }}</li>
-        </ul>
+        <!-- <h3>⚙️ 사용 기술</h3> -->
+        <!-- <div class="modal__tech">
+          <div v-for="tech in project.tech" :key="tech" class="tech-card">
+            <div class="img_box"><img :src="getTechIcon(tech)" :alt="tech" /></div>
+            <span>{{ tech }}</span>
+          </div>
+        </div> -->
         <div class="line"></div>
 
         <!-- 작업 화면 (스크린샷) -->
@@ -59,6 +62,26 @@
 </template>
 
 <script setup>
+import { computed } from "vue";
+
+// 기술명과 아이콘 매핑
+const techIcons = {
+  HTML: "/icons/html.svg",
+  CSS: "/icons/css.svg",
+  JavaScript: "/icons/javascript.svg",
+  Vue: "/icons/vue.svg",
+  WebGL: "/icons/webgl.svg",
+  "Three.js": "/icons/threejs.svg",
+  "Babylon.js": "/icons/babylonjs.svg",
+  GitHub: "/icons/github.svg",
+  Notion: "/icons/notion.svg",
+  Figma: "/icons/figma.svg",
+};
+
+const getTechIcon = (tech) => {
+  return techIcons[tech] || "/icons/default.svg"; // 아이콘이 없을 경우 기본 아이콘 표시
+};
+
 defineProps({
   project: Object,
   isOpen: Boolean,
@@ -188,7 +211,14 @@ const closeModal = () => {
   text-align: left;
   padding: 0px;
 }
-
+.modal__tech {
+  display: flex;
+  gap: 20px;
+}
+.modal__tech img {
+  width: 30px;
+  height: 30px;
+}
 .modal__features li::before,
 .modal__role li::before,
 .modal__tech li::before {
@@ -241,5 +271,14 @@ const closeModal = () => {
   width: 100%;
   height: 2px;
   background: lightgrey;
+}
+.img_box {
+  background: rgb(37, 37, 37);
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
