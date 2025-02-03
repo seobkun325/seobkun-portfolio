@@ -22,20 +22,37 @@
       <div class="about__qa">
         <div class="q">Q. 스마트팩토리를 도메인으로 선택한 이유?</div>
         <div class="a">
-          스마트팩토리는 단순한 자동화를 넘어, 데이터를 기반으로 공정을 최적화하고
-          <span class="a__highlight">실시간 모니터링을 통해 생산성을 극대화</span>하는 방향으로 발전하고 있습니다. 저는
-          이러한 스마트팩토리 환경에서 <span class="a__highlight">데이터 시각화</span>와
-          <span class="a__highlight">디지털 트윈 기술</span>이 중요한 역할을 한다고 생각했습니다.
+          처음 스마트팩토리에 대해 접했을 때, 단순한 자동화 시스템이 아니라
+          <span class="a__highlight">데이터를 기반으로 공정을 최적화하고 실시간으로 모니터링하는 구조</span>에 흥미를
+          느꼈습니다. 특히, <span class="a__highlight">디지털 트윈</span> 및
+          <span class="a__highlight">데이터 시각화</span> 기술이 제조업의 효율성을 극대화하는 데 핵심적인 역할을 한다는
+          점이 인상적이었습니다. 이러한 기술이 단순히 정보를 나열하는 것이 아니라, 공장 내 데이터를 직관적으로 표현하여
+          실제 의사결정에 영향을 줄 수 있다는 점이 매력적이었고,
+          <span class="a__highlight">스마트팩토리의 데이터 활용 가치</span>를 높이는 개발자가 되고 싶다는 목표를 가지게
+          되었습니다.
         </div>
       </div>
 
       <div class="about__qa">
         <div class="q">Q. 프론트엔드를 선택한 이유?</div>
+        <div class="a">저는 사용자가 직접 보고, 조작하는 UI를 설계하고 개발하는 과정에서 보람을 느낍니다.</div>
         <div class="a">
-          프론트엔드는 사용자가 가장 먼저 접하는 영역이자, 서비스의
-          <span class="a__highlight">직관성과 편의성을 결정짓는 중요한 요소</span>라고 생각합니다. 단순히 UI를 개발하는
-          것이 아니라, 사용자의 니즈를 반영하여
-          <span class="a__highlight">더 효율적이고 직관적인 경험을 제공하는 과정</span>이 매력적이었습니다.
+          프론트엔드는 단순한 화면 구현을 넘어
+          <span class="a__highlight">사용자의 니즈</span>를 반영하여 더
+          <span class="a__highlight">편리하고 직관적인 경험</span>을 제공하는 과정이 중요하다고 생각합니다. 특히,
+          데이터를 단순히 출력하는 것이 아니라, 의미 있는 정보로
+          <span class="a__highlight">가공하여 시각적으로 효과적으로 전달</span>하는 과정에 흥미를 가지게 되었고, 이를
+          구현할 수 있는 분야가 프론트엔드라고 판단하여 선택하게 되었습니다.
+        </div>
+      </div>
+      <div class="about__qa">
+        <div class="q">Q. 개발에서 중요하게 생각하는 것은?</div>
+        <div class="a">
+          프론트엔드는 단순한 화면 개발이 아니라, <span class="a__highlight">사용자가 직관적으로 이해</span>하고
+          <span class="a__highlight">편하게 사용</span>할 수 있도록 만드는 것이 중요하다고 생각합니다. Drag & Drop UI를
+          설계할 때 <span class="a__highlight">직관적인 조작 방식</span>과 <span class="a__highlight">피드백</span>을
+          고려하여, 사용자가 쉽게 사용할 수 있도록 신경 쓴 경험이 있으며, 항상
+          <span class="a__highlight">역지사지의 태도</span>로 사용자 경험을 최우선으로 생각하며 개발하려 노력합니다.
         </div>
       </div>
     </div>
@@ -185,7 +202,7 @@
   font-size: 1rem;
   text-align: left;
   font-weight: 300;
-  line-height: 2rem;
+  line-height: 1.9rem;
 }
 .a__highlight {
   background-color: rgb(25, 25, 25);
@@ -219,6 +236,7 @@
 .skills__category {
   flex: 1;
   min-width: 300px;
+  margin-bottom: 40px;
 }
 
 .skills__category h4 {
