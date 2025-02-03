@@ -17,22 +17,29 @@
     </div>
 
     <!-- 하단 업데이트 정보 -->
-    <p class="hero__update">update. 25. 02. 01</p>
+    <p class="hero__update">update. 25. 02. 04</p>
 
     <!-- 아래 화살표 -->
     <div class="hero__scroll">
-      <i class="arrow"></i>
+      <i class="arrow" @click="scrollToAbout"></i>
     </div>
 
     <!-- 우측 아이콘 버튼 -->
-    <div class="hero__contact">
+    <!-- <div class="hero__contact">
       <button class="contact-btn"><i class="icon-mail"></i></button>
       <button class="contact-btn"><i class="icon-chat"></i></button>
       <button class="contact-btn"><i class="icon-arrow"></i></button>
-    </div>
+    </div> -->
   </section>
 </template>
-
+<script setup>
+const scrollToAbout = () => {
+  const aboutSection = document.querySelector(".about");
+  if (aboutSection) {
+    aboutSection.scrollIntoView({ behavior: "smooth" });
+  }
+};
+</script>
 <style scoped>
 .hero {
   width: 100vw;

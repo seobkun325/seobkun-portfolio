@@ -55,6 +55,16 @@
           <span class="a__highlight">역지사지의 태도</span>로 사용자 경험을 최우선으로 생각하며 개발하려 노력합니다.
         </div>
       </div>
+      <div class="about__qa">
+        <div class="q">Q. 어려운 문제를 대하는 자세는?</div>
+        <div class="a">
+          저는 어려운 문제를 끝까지 해결하는 <span class="a__highlight">끈기</span>를 중요하게 생각합니다. 백준 알고리즘
+          풀이를 꾸준히 하며, 최근 목표로 했던 <span class="a__highlight">플레티넘 등급</span>에 도달했습니다. 처음 보는
+          알고리즘이 나오면 포기하지 않고, 개념을 익히고 직접 구현하며 해결책을 찾는 과정이 즐겁습니다. 개발에서도
+          마찬가지로, 문제가 발생하면 <span class="a__highlight">포기하지 않고 끝까지 물고 늘어지는</span> 습관을
+          길러왔습니다. 이러한 태도로, 앞으로도 새로운 기술과 문제를 적극적으로 해결해 나가고자 합니다.
+        </div>
+      </div>
     </div>
 
     <!-- Skills & Tools 섹션 -->
