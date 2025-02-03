@@ -102,7 +102,7 @@ const projects = ref([
     image: images["../assets/image/traum-thumbnail.png"].default,
     color: "#4A90E2", // 포인트 컬러 적용
     githubLink: null,
-    youtubeLink: "https://youtube.com/seobkun/yourcapsules",
+    youtubeLink: "https://youtu.be/7OaEGdnoYcE",
     tech: ["JavaScript", "Vue", "Babylon.js", "MQTT", "WebSocket"],
   },
   {
@@ -112,7 +112,7 @@ const projects = ref([
     description:
       "현대 아산공장 의장공정에서 실시간 데이터 모니터링을 통해 공정 가시성을 확보하고, 데이터 기반 의사 결정을 지원하는 시스템입니다. 생산 및 설비 데이터를 시각화하여 엔지니어들이 공정 상태를 쉽게 파악할 수 있도록 설계되었습니다.",
     date: "2024.12 - 2024.12",
-    teamSize: "5인 (프론트 3명, 백엔드 2명)",
+    teamSize: "6인 (프론트 3명, 백엔드 3명)",
     tags: ["팀", "웹", "스마트팩토리", "데이터 시각화"],
     features: [
       "자재 현 재고량 및 안전재고량 실시간 조회",
@@ -133,7 +133,7 @@ const projects = ref([
     image: images["../assets/image/hyundai-thumbnail.png"].default,
     color: "#2C3E50", // 포인트 컬러 적용 (현대자동차 브랜드 컬러와 유사한 톤)
     githubLink: null,
-    youtubeLink: "null",
+    youtubeLink: "https://www.youtube.com/watch?v=TDZEwmIXL8Q",
     tech: ["JavaScript", "HTML", "CSS", "jQuery", "SMWP", "ECharts", "Element Plus"],
   },
   {
@@ -142,7 +142,7 @@ const projects = ref([
     shortDescription: "스터디와 프로젝트 멤버를 모으고, 일정을 관리하는 플랫폼",
     description:
       "COKKIRI는 스터디와 프로젝트 멤버를 모집하고, 팀 일정 및 진행 상황을 관리할 수 있도록 돕는 웹 플랫폼입니다. 사용자는 팀을 생성하고, 일정 조율, 진행 상태 공유, 역할 분배 등을 효율적으로 수행할 수 있습니다.",
-    date: "2024.06 - 2024.07",
+    date: "2024.11 - 진행 중",
     teamSize: "4인 (프론트 2명, 백엔드 2명)",
     tags: ["팀", "웹", "사이드 프로젝트"],
     features: [
@@ -168,11 +168,11 @@ const projects = ref([
   },
   {
     id: 5,
-    name: "Seobkun's Portfolio",
+    name: "Seobkun - Portfolio",
     shortDescription: "Vue.js 기반의 개인 포트폴리오 웹사이트",
     description:
-      "Seobkun's Portfolio는 Vue.js를 활용하여 개발 중인 개인 포트폴리오 웹사이트로, 개발 경험과 프로젝트를 정리하고 효과적으로 보여주기 위해 제작되었습니다. 프로젝트 섹션, 교육 섹션, 모달 기능을 포함하며, 반응형 디자인을 적용하여 다양한 해상도에서 최적의 레이아웃을 제공합니다.",
-    date: "2024.01 - 진행 중",
+      "Seobkun - Portfolio는 Vue.js를 활용하여 개발 중인 개인 포트폴리오 웹사이트로, 개발 경험과 프로젝트를 정리하고 효과적으로 보여주기 위해 제작되었습니다. 프로젝트 섹션, 교육 섹션, 모달 기능을 포함하며, 반응형 디자인을 적용하여 다양한 해상도에서 최적의 레이아웃을 제공합니다.",
+    date: "2025.01 - 진행 중",
     teamSize: "1인 (개인 프로젝트)",
     tags: ["개인", "웹", "포트폴리오", "Vue", "SCSS"],
     features: [
@@ -192,7 +192,7 @@ const projects = ref([
     screenshots: ["../assets/image/portfolio-1.png", "../assets/image/portfolio-2.png"],
     image: images["../assets/image/portfolio-thumbnail.png"].default,
     color: "#3b3b3b", // 포인트 컬러 적용
-    githubLink: "https://github.com/seobkun325",
+    githubLink: "https://github.com/seobkun325/seobkun-portfolio",
     youtubeLink: null,
     tech: ["Vue", "SCSS", "HTML", "CSS", "JavaScript"],
   },

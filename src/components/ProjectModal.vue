@@ -43,10 +43,10 @@
         <div class="line"></div>
 
         <!-- 작업 화면 (스크린샷) -->
-        <h3>📸 작업 화면</h3>
+        <!-- <h3>📸 작업 화면</h3>
         <div class="modal__screenshots">
           <img v-for="screenshot in project.screenshots" :key="screenshot" :src="screenshot" alt="Project Screenshot" />
-        </div>
+        </div> -->
 
         <!-- 프로젝트 링크 -->
         <div class="modal__links">
