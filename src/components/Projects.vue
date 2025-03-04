@@ -107,7 +107,21 @@ const projects = ref([
       "No-Code 기반 Drag & Drop 인터페이스 설계",
       "GitHub PR 리뷰 및 코드 관리",
     ],
-    screenshots: ["../assets/image/traum-1.png", "../assets/image/traum-2.png"],
+    screenshots: [
+      { src: "/traum/1.png", description: "배치된 3D 오브젝트와 Live-Data 간의 매핑" },
+      { src: "/traum/2.png", description: "Drag & Drop 형태의 사용자 친화적 웹 인터페이스 지원" },
+      { src: "/traum/3.png", description: "수집 데이터 저장 및 조회 등 시계열데이터 활용에 최적화된 influxDB 활용" },
+      {
+        src: "/traum/7.png",
+        description: "MQTT 기반 실시간 모니터링과 대시보드 제공 및, WebSocket 기반 리셋, 정지 등 원격 제어 지원",
+      },
+      { src: "/traum/4.png", description: "Dashboard에서 Edukit의 데이터 확인" },
+      {
+        src: "/traum/5.png",
+        description: "문제 발생 당시 원인을 체계적으로 파악하여 향후 대응 및 AI 학습 등 활용 가능",
+      },
+      { src: "/traum/6.png", description: "Unity WebGL을 통해 실제 설비의 디지털복제를 통한 과거 상황 재현" },
+    ],
     image: images["../assets/image/traum-thumbnail.png"].default,
     color: "#4A90E2", // 포인트 컬러 적용
     githubLink: null,
@@ -138,7 +152,6 @@ const projects = ref([
       "HTML/CSS 기반 대시보드 스타일링 및 반응형 대응",
       "GitHub PR 리뷰 및 코드 관리, Notion을 통한 일정 관리",
     ],
-    screenshots: ["../assets/image/hyundai-1.png", "../assets/image/hyundai-2.png"],
     image: images["../assets/image/hyundai-thumbnail.png"].default,
     color: "#2C3E50", // 포인트 컬러 적용 (현대자동차 브랜드 컬러와 유사한 톤)
     githubLink: null,
@@ -170,7 +183,6 @@ const projects = ref([
       "GitHub을 활용한 코드 협업 및 PR 리뷰",
       "현재 진행 중...",
     ],
-    screenshots: ["../assets/image/cokkiri-1.png", "../assets/image/cokkiri-2.png"],
     image: images["../assets/image/cokkiri-thumbnail.png"].default,
     color: "#F4A261", // 포인트 컬러 적용
     githubLink: null,
@@ -180,7 +192,6 @@ const projects = ref([
   {
     id: 5,
     name: "Seobkun - Portfolio",
-    shortDescription: "Vue.js 기반의 개인 포트폴리오 웹사이트",
     description:
       "Seobkun - Portfolio는 Vue.js를 활용하여 개발 중인 개인 포트폴리오 웹사이트로, 개발 경험과 프로젝트를 정리하고 효과적으로 보여주기 위해 제작되었습니다. 프로젝트 섹션, 교육 섹션, 모달 기능을 포함하며, 반응형 디자인을 적용하여 다양한 해상도에서 최적의 레이아웃을 제공합니다.",
     date: "2025.01 - 진행 중",

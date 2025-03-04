@@ -226,8 +226,8 @@ const getImagePath = (src) => {
 .modal__features li::before,
 .modal__role li::before,
 .modal__tech li::before {
-  content: "✔ ";
-  color: #4caf50;
+  content: "- ";
+  color: gray;
   font-weight: bold;
 }
 
@@ -241,7 +241,7 @@ const getImagePath = (src) => {
 }
 
 .modal__screenshots img {
-  height: auto;
+  height: 80%;
   border-radius: 5px;
 }
 
