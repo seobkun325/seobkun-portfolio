@@ -226,7 +226,7 @@ const projects = ref([
     shortDescription: "언리얼 엔진 5를 활용한 스마트팩토리 화재 대피 시뮬레이션",
     description:
       "공장 화재 시뮬레이션 프로젝트는 스마트팩토리 환경에서 화재 발생 시 작업자의 대피 경로를 최적화하고, 안전 대응 시스템을 개선하기 위한 시뮬레이션입니다. 언리얼 엔진 5를 활용하여 AI 작업자의 행동을 모델링하고, 실시간 화재 확산 및 대피 경로를 분석하는 시스템을 구축했습니다.",
-    date: "2024.02 - 2024.02",
+    date: "2025.02 - 2025.02",
     teamSize: "5인",
     tags: ["팀", "시뮬레이션", "스마트팩토리", "AI", "디지털 트윈"],
     features: [
@@ -256,6 +256,43 @@ const projects = ref([
     githubLink: null,
     youtubeLink: "https://youtu.be/DB_dZ9CorcY",
     tech: ["Unreal Engine 5", "Blueprint", "AI Navigation", "Niagara System", "Chaos Destruction"],
+  },
+  {
+    id: 7,
+    name: "와셔 품질 검사 시스템",
+    shortDescription: "YOLOv8과 MobileNet을 활용한 실시간 와셔 품질 검사 시스템",
+    description:
+      "이 프로젝트는 스마트팩토리에서 실시간으로 와셔(Washer)의 품질을 검사하고, 불량품을 자동으로 분류하는 시스템을 개발하는 것을 목표로 했습니다. YOLOv8을 활용한 객체 감지와 MobileNet 기반 CNN 모델을 적용하여 불량 여부를 판단하고, Raspberry Pi 및 Node-RED를 이용해 분류된 와셔를 자동으로 이동시키는 하드웨어 연계 시스템을 구축했습니다.",
+    date: "2025.02 - 2025.02",
+    teamSize: "5인",
+    tags: ["팀", "스마트팩토리", "머신비전", "AI", "IoT"],
+    features: [
+      "YOLOv8을 활용한 와셔 객체 탐지 및 품질 검사",
+      "MobileNet 기반 CNN 모델을 통한 정상/불량 분류",
+      "OpenCV를 활용한 데이터 전처리 및 증강",
+      "MQTT 및 Node-RED를 이용한 실시간 IoT 연계",
+      "Raspberry Pi를 이용한 모터 컨트롤 및 불량품 자동 분류",
+      "실시간 품질 데이터 대시보드 웹 프론트엔드 개발",
+    ],
+    role: [
+      "YOLOv11 모델 학습",
+      "Node-RED 기반 MQTT 프로토콜을 이용한 데이터 송수신 구현",
+      "Raspberry Pi를 이용한 모터 제어 로직 개발 및 하드웨어 연계",
+      "팀원들과 협업하여 모델 성능 최적화 및 데이터셋 보완",
+    ],
+    // screenshots: [
+    //   { src: "/machineVision/capture.png", description: "실시간 와셔 감지 화면" },
+    //   { src: "/machineVision/model-training.png", description: "YOLOv8 모델 학습 과정" },
+    //   { src: "/machineVision/cnn-inference.png", description: "MobileNet 기반 품질 판별" },
+    //   { src: "/machineVision/motor-control.png", description: "Node-RED를 통한 모터 제어" },
+    //   { src: "/machineVision/iot-system.png", description: "MQTT 기반 IoT 연계 시스템" },
+    //   { src: "/machineVision/web-dashboard.png", description: "실시간 품질 검사 대시보드" },
+    // ],
+    image: images["../assets/image/machineVision-thumbnail.png"].default,
+    color: "#008080", // 포인트 컬러 적용 (AI & IoT 느낌 강조)
+    githubLink: null,
+    youtubeLink: "https://youtu.be/S2RWd2TrX8s",
+    tech: ["YOLOv8", "MobileNet", "OpenCV", "Raspberry Pi", "Node-RED", "MQTT", "Vue.js"],
   },
 ]);
 
