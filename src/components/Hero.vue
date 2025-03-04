@@ -24,14 +24,14 @@
       <i class="arrow" @click="scrollToAbout"></i>
     </div>
 
-    <!-- 우측 아이콘 버튼 -->
-    <!-- <div class="hero__contact">
-      <button class="contact-btn"><i class="icon-mail"></i></button>
-      <button class="contact-btn"><i class="icon-chat"></i></button>
-      <button class="contact-btn"><i class="icon-arrow"></i></button>
-    </div> -->
+    <!-- 우측 고정 아이콘 버튼 -->
+    <div class="hero__fixed-buttons">
+      <button class="fixed-btn github-btn" @click="goToGitHub"><i class="icon-github"></i> GitHub</button>
+      <button class="fixed-btn top-btn" @click="scrollToTop"><i class="icon-arrow-up"></i> Top</button>
+    </div>
   </section>
 </template>
+
 <script setup>
 const scrollToAbout = () => {
   const aboutSection = document.querySelector(".about");
@@ -39,7 +39,16 @@ const scrollToAbout = () => {
     aboutSection.scrollIntoView({ behavior: "smooth" });
   }
 };
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+const goToGitHub = () => {
+  window.open("https://github.com/seobkun325", "_blank");
+};
 </script>
+
 <style scoped>
 .hero {
   width: 100vw;
@@ -131,31 +140,55 @@ const scrollToAbout = () => {
   animation: bounce 1.5s infinite;
 }
 
-/* 우측 아이콘 버튼 */
-.hero__contact {
-  position: absolute;
-  bottom: 20px;
+/* 우측 고정 버튼 */
+.hero__fixed-buttons {
+  position: fixed;
+  bottom: 50px;
   right: 20px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  z-index: 999;
 }
 
-.contact-btn {
-  width: 45px;
+.fixed-btn {
+  width: 120px;
   height: 45px;
   background: white;
-  border-radius: 50%;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-.contact-btn:hover {
+.fixed-btn:hover {
   background: black;
+  color: white;
+}
+
+/* GitHub 버튼 */
+.github-btn {
+  background: #333;
+  color: white;
+}
+
+.github-btn:hover {
+  background: black;
+}
+
+/* 맨 위로 버튼 */
+.top-btn {
+  background: lightgray;
+}
+
+.top-btn:hover {
+  background: gray;
   color: white;
 }
 
