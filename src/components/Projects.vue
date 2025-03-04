@@ -192,6 +192,7 @@ const projects = ref([
   {
     id: 5,
     name: "Seobkun - Portfolio",
+    shortDescription: "개인 포트폴리오 프로젝트",
     description:
       "Seobkun - Portfolio는 Vue.js를 활용하여 개발 중인 개인 포트폴리오 웹사이트로, 개발 경험과 프로젝트를 정리하고 효과적으로 보여주기 위해 제작되었습니다. 프로젝트 섹션, 교육 섹션, 모달 기능을 포함하며, 반응형 디자인을 적용하여 다양한 해상도에서 최적의 레이아웃을 제공합니다.",
     date: "2025.01 - 진행 중",
@@ -213,12 +214,48 @@ const projects = ref([
       "GitHub을 활용한 코드 관리",
       "현재 진행 중...",
     ],
-    screenshots: ["../assets/image/portfolio-1.png", "../assets/image/portfolio-2.png"],
     image: images["../assets/image/portfolio-thumbnail.png"].default,
     color: "#3b3b3b", // 포인트 컬러 적용
     githubLink: "https://github.com/seobkun325/seobkun-portfolio",
     youtubeLink: null,
     tech: ["Vue", "SCSS", "HTML", "CSS", "JavaScript"],
+  },
+  {
+    id: 6,
+    name: "공장 화재 시뮬레이션",
+    shortDescription: "언리얼 엔진 5를 활용한 스마트팩토리 화재 대피 시뮬레이션",
+    description:
+      "공장 화재 시뮬레이션 프로젝트는 스마트팩토리 환경에서 화재 발생 시 작업자의 대피 경로를 최적화하고, 안전 대응 시스템을 개선하기 위한 시뮬레이션입니다. 언리얼 엔진 5를 활용하여 AI 작업자의 행동을 모델링하고, 실시간 화재 확산 및 대피 경로를 분석하는 시스템을 구축했습니다.",
+    date: "2024.02 - 2024.02",
+    teamSize: "5인",
+    tags: ["팀", "시뮬레이션", "스마트팩토리", "AI", "디지털 트윈"],
+    features: [
+      "언리얼 엔진 5를 활용한 공장 화재 시뮬레이션 개발",
+      "AI 작업자의 대피 경로 탐색 및 최적화",
+      "AGV(자율주행 물류 로봇) 이동 경로 분석 및 화재 발생 시 정지 기능",
+      "스마트팩토리 내 비상 탈출 경로 시각화",
+      "화재 확산 및 물리적 장애물(파괴 시스템) 구현",
+      "스프링클러 및 화재 진압 시스템 적용",
+    ],
+    role: [
+      "AI 작업자 행동 로직 및 애니메이션 전환 로직 개발",
+      "작업자 네비게이션 시스템 및 대피 경로 최적화",
+      "팀원들과 협업하여 언리얼 엔진 내 AI 및 환경 구성 최적화",
+    ],
+    screenshots: [
+      { src: "/fireSimulation/factory.png", description: "공장 구현" },
+      { src: "/fireSimulation/animation.png", description: "Animation_BP 로직" },
+      { src: "/fireSimulation/worker.png", description: "이동하는 작업자 구현" },
+      { src: "/fireSimulation/escape.png", description: "AI 작업자의 최단 탈출 경로 알고리즘 구현" },
+      { src: "/fireSimulation/route.png", description: "AI 작업자의 탈출 루트 로그" },
+      { src: "/fireSimulation/explore.png", description: "화재시 폭발 애니메이션" },
+      { src: "/fireSimulation/agv.png", description: "AGV의 이동 로직 구현" },
+    ],
+    image: images["../assets/image/fireSimulation-thumbnail.png"].default,
+    color: "#FF4500", // 포인트 컬러 적용 (화재 관련 느낌 강조)
+    githubLink: null,
+    youtubeLink: "https://youtu.be/DB_dZ9CorcY",
+    tech: ["Unreal Engine 5", "Blueprint", "AI Navigation", "Niagara System", "Chaos Destruction"],
   },
 ]);
 
