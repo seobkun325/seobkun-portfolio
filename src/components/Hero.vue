@@ -2,7 +2,7 @@
   <section class="hero">
     <!-- 상단 네비게이션 -->
     <nav class="hero__nav">
-      <a href="https://github.com/seobkun325" target="_blank">GitHub</a>
+      <!-- <a href="https://github.com/seobkun325" target="_blank">GitHub</a> -->
       <!-- <a href="https://velog.io/" target="_blank">Velog</a> -->
     </nav>
 
@@ -17,7 +17,7 @@
     </div>
 
     <!-- 하단 업데이트 정보 -->
-    <p class="hero__update">update. 25. 02. 04</p>
+    <p class="hero__update">update. 25. 03. 04</p>
 
     <!-- 아래 화살표 -->
     <div class="hero__scroll">

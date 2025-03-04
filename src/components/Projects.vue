@@ -65,7 +65,17 @@ const projects = ref([
       "미디어 파일(이미지, 비디오, 오디오) 업로드 및 처리 기능 개발",
       "GitHub PR 리뷰 및 코드 관리, Notion을 통한 정보 공유",
     ],
-    screenshots: ["../assets/image/capsule-1.png", "../assets/image/capsule-2.png"],
+    screenshots: [
+      { src: "../assets/image/yourCapsule/main.png", description: "로그인 화면" },
+      { src: "../assets/image/yourCapsule/menu.png", description: "메인 메뉴 화면" },
+      { src: "../assets/image/yourCapsule/createCapsule.png", description: "캡슐 생성 화면" },
+      { src: "../assets/image/yourCapsule/progress.png", description: "진척도 화면" },
+      { src: "../assets/image/yourCapsule/progressdetail.png", description: "진척도 상세보기 화면" },
+      { src: "../assets/image/yourCapsule/past.png", description: "캡슐 도감 화면" },
+      { src: "../assets/image/yourCapsule/gameuser.png", description: "게임 메뉴 화면 (유저의 집)" },
+      { src: "../assets/image/yourCapsule/gamecapsule.png", description: "게임 메뉴 화면 (캡슐 센터)" },
+      { src: "../assets/image/yourCapsule/admin.png", description: "관리자 페이지" },
+    ],
     image: images["../assets/image/capsule-thumbnail.png"].default,
     color: "#FF6F61", // 포인트 컬러 적용
     githubLink: "https://github.com/seobkun325/ThreeIdiots-FE",
@@ -101,7 +111,7 @@ const projects = ref([
     image: images["../assets/image/traum-thumbnail.png"].default,
     color: "#4A90E2", // 포인트 컬러 적용
     githubLink: null,
-    youtubeLink: "https://youtu.be/7OaEGdnoYcE",
+    //youtubeLink: "https://youtu.be/7OaEGdnoYcE",
     tech: ["JavaScript", "Vue", "Babylon.js", "MQTT", "WebSocket"],
   },
   {

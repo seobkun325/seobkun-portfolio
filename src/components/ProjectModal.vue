@@ -21,11 +21,13 @@
         <p class="modal__description">{{ project.description }}</p>
 
         <div class="line"></div>
+
         <!-- 주요 기능 -->
         <h3>📌 주요 기능</h3>
         <ul class="modal__features">
           <li v-for="feature in project.features" :key="feature">{{ feature }}</li>
         </ul>
+
         <div class="line"></div>
 
         <!-- 역할 및 기여 내용 -->
@@ -33,23 +35,23 @@
         <ul class="modal__role">
           <li v-for="role in project.role" :key="role">{{ role }}</li>
         </ul>
-        <div class="line"></div>
 
-        <!-- 사용 기술 -->
-        <!-- <h3>⚙️ 사용 기술</h3> -->
-        <!-- <div class="modal__tech">
-          <div v-for="tech in project.tech" :key="tech" class="tech-card">
-            <div class="img_box"><img :src="getTechIcon(tech)" :alt="tech" /></div>
-            <span>{{ tech }}</span>
-          </div>
-        </div> -->
         <div class="line"></div>
 
         <!-- 작업 화면 (스크린샷) -->
-        <!-- <h3>📸 작업 화면</h3>
+        <h3>📸 작업 화면</h3>
         <div class="modal__screenshots">
-          <img v-for="screenshot in project.screenshots" :key="screenshot" :src="screenshot" alt="Project Screenshot" />
-        </div> -->
+          <div v-for="(screenshot, index) in project.screenshots" :key="index" class="screenshot-container">
+            <img
+              :src="getImagePath(screenshot.src)"
+              :alt="screenshot.description"
+              class="screenshot-image"
+              @click="openImage(getImagePath(screenshot.src))" />
+            <p class="screenshot-description">{{ screenshot.description }}</p>
+          </div>
+        </div>
+
+        <div class="line"></div>
 
         <!-- 프로젝트 링크 -->
         <div class="modal__links">
@@ -58,29 +60,16 @@
         </div>
       </div>
     </div>
+
+    <!-- 이미지 확대 모달 -->
+    <div v-if="selectedImage" class="image-modal-overlay" @click="selectedImage = null">
+      <img :src="selectedImage" class="image-modal" />
+    </div>
   </div>
 </template>
 
 <script setup>
-import { computed } from "vue";
-
-// 기술명과 아이콘 매핑
-const techIcons = {
-  HTML: "/icons/html.svg",
-  CSS: "/icons/css.svg",
-  JavaScript: "/icons/javascript.svg",
-  Vue: "/icons/vue.svg",
-  WebGL: "/icons/webgl.svg",
-  "Three.js": "/icons/threejs.svg",
-  "Babylon.js": "/icons/babylonjs.svg",
-  GitHub: "/icons/github.svg",
-  Notion: "/icons/notion.svg",
-  Figma: "/icons/figma.svg",
-};
-
-const getTechIcon = (tech) => {
-  return techIcons[tech] || "/icons/default.svg"; // 아이콘이 없을 경우 기본 아이콘 표시
-};
+import { ref } from "vue";
 
 defineProps({
   project: Object,
@@ -88,9 +77,24 @@ defineProps({
 });
 
 const emit = defineEmits(["close"]);
+const selectedImage = ref(null);
 
 const closeModal = () => {
   emit("close");
+};
+
+const openImage = (src) => {
+  selectedImage.value = src;
+};
+
+// 이미지 경로 처리 함수 (Vite/Webpack 환경에서도 정상적으로 로딩되도록 처리)
+const getImagePath = (src) => {
+  try {
+    return new URL(src, import.meta.url).href;
+  } catch (e) {
+    console.error("이미지 로드 실패:", src, e);
+    return "";
+  }
 };
 </script>
 
@@ -237,7 +241,6 @@ const closeModal = () => {
 }
 
 .modal__screenshots img {
-  width: 150px;
   height: auto;
   border-radius: 5px;
 }
@@ -280,5 +283,59 @@ const closeModal = () => {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* 스크린샷 컨테이너 */
+.modal__screenshots {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2개씩 배치 */
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.screenshot-container {
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.screenshot-container:hover {
+  transform: scale(1.05);
+}
+
+.screenshot-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.screenshot-description {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* 이미지 확대 모달 */
+.image-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1100;
+}
+
+.image-modal {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
 }
 </style>
