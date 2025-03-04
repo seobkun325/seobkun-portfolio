@@ -42,11 +42,7 @@
         <h3>📸 작업 화면</h3>
         <div class="modal__screenshots">
           <div v-for="(screenshot, index) in project.screenshots" :key="index" class="screenshot-container">
-            <img
-              :src="getImagePath(screenshot.src)"
-              :alt="screenshot.description"
-              class="screenshot-image"
-              @click="openImage(getImagePath(screenshot.src))" />
+            <img :src="getImagePath(screenshot.src)" :alt="screenshot.description" class="screenshot-image" />
             <p class="screenshot-description">{{ screenshot.description }}</p>
           </div>
         </div>
@@ -333,8 +329,8 @@ const getImagePath = (src) => {
 }
 
 .image-modal {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: 40%;
+  max-height: 40%;
   border-radius: 10px;
   box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
 }
