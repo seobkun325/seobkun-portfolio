@@ -33,11 +33,11 @@ const education = ref([
     id: 1,
     date: "2024.08 - 2025.02",
     institution: `현대오토에버 모빌리티 SW 스쿨`,
-    course: "스마트팩토리 관련 교육 수강 중",
+    course: "스마트팩토리 관련 교육 수료",
     details: [
       "스마트팩토리 도메인 및 데이터 분석 교육",
       "python, java, c# 등 프로그래밍 언어 학습",
-      "협업 프로젝트 3회 (sfaas, cps/phm, 머신비전) 진행",
+      "협업 프로젝트 4회 (sfaas, cps/phm, 머신비전, 디지털트윈) 진행",
       "자료구조, 운영체제, 알고리즘 등 CS 스터디에 참가하여 학습",
     ],
     techIcons: [
